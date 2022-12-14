@@ -1,0 +1,51 @@
+fetch('https://api-mobile-criptoinfo.alvimarfelipe.repl.co/updateNoticia?id=11', { // URL
+    method: 'put', // Método
+    headers: {
+        'Access-Control-Allow-Origin': '*',  // CORS, permitir dados de diversas urls no back end
+        'Content-Type': 'application/json', // Envio de dados via JSON {TUDO que tá no body}
+    },
+    body: JSON.stringify({ // Body (Tudo que for passar para o back [EX..req.body.userid]
+      titulo: 't',
+      noticia: 'noticia',
+      imagem: 'imagem',
+      tipo: 'tipo'
+      }),
+    })
+    .catch((err) => {
+        Alert.alert('Algo deu errado: ' + err); //Alerta de erros
+});
+
+
+
+fetch('https://api-mobile-criptoinfo.alvimarfelipe.repl.co/addNoticia', { // URL
+    method: 'post', // Método
+    headers: {
+        'Access-Control-Allow-Origin': '*',  // CORS, permitir dados de diversas urls no back end
+        'Content-Type': 'application/json', // Envio de dados via JSON {TUDO que tá no body}
+    },
+    body: JSON.stringify({ // Body (Tudo que for passar para o back [EX..req.body.userid]
+      titulo: 't',
+      noticia: 'noticia',
+      imagem: 'imagem',
+      tipo: 'tipo'
+      }),
+    })
+    .catch((err) => {
+        Alert.alert('Algo deu errado: ' + err); //Alerta de erros
+});
+
+
+
+fetch( 'https://api-mobile-criptoinfo.alvimarfelipe.repl.co/getNoticia?tipo=todos' )
+    .then(res => res.json())
+    .then((json)=> console.log(json))
+    .catch((error)=> console.log(error))
+
+
+
+
+
+fetch('https://api-mobile-criptoinfo.alvimarfelipe.repl.co/deletNoticia?id=10' {
+    method: 'delete'
+    })
+    .then(response => response.json());
