@@ -15,3 +15,4 @@
 
 6. Se tudo ocooreu da maneira desejada o aplicativo sera exibido na tela de seu celular.
 
+### O app demora um pouco a rodar, o backend ta no replit e ele demora um pouco a iniciar
